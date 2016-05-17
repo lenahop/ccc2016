@@ -28,14 +28,15 @@ class Clothes
 
 end 
 
-b = Clothes.new("Bottom", "Lightwash Denim", "Oversized Jeans", "Casual")
-t = Clothes.new("Top", "White", "Henley", "Casual")
-s = Clothes.new("Shoes", "Black", "Sneakers", "Versatile")
-bag =Clothes.new("Bag", "Camel", "Tote", "Versatile")
-s2 =Clothes.new("Shoes", "Metallic Brown", "Sandal", "Casual")
-t2 =Clothes.new("Top", "Gray", "Tank top", "Versatile")
-b2 = Clothes.new("Bottom", "Brown suede", "Mini Skirt", "Versatile")
-
+bottom_1 = Clothes.new("Bottom", "Lightwash Denim", "Oversized Jeans", "Casual")
+top_1 = Clothes.new("Top", "White", "Henley", "Casual")
+shoes_1 = Clothes.new("Shoes", "Black", "Sneakers", "Casual")
+bag_1 = Clothes.new("Bag", "Camel", "Tote", "Casual")
+shoes_2 = Clothes.new("Shoes", "Metallic Brown", "Sandal", "Casual")
+top_2 = Clothes.new("Top", "Gray", "Tank top", "Fancy")
+bottom_2 = Clothes.new("Bottom", "Brown suede", "Mini Skirt", "Fancy")
+bag_2 = Clothes.new("Bag", "Black", "Crossbody", "Fancy" )
+shoes_3 = Clothes.new("Shoes", "Black and White", "Heeled Sandal", "Fancy")
 
 class Outfit
 	def initialize(top, bottom, shoes, bag)
@@ -45,17 +46,37 @@ class Outfit
 		@bag = bag
 	end
 
-	def color_compare
+	def occasion_compare
+		if @top.occasion == @bottom.occasion && @shoes.occasion == @bag.occasion
+			puts "It's a match!"
+			puts @top.occasion
+		else 
+			puts "MIS-MATCH! Try again"
+			puts @top.occasion
+		end 
+	end
+
+
+
+
+
+
+
+		
+
 
 
 end
 
-new_outfit = Outfit.new(t,b,s,bag)
+new_outfit = Outfit.new(bottom_1, top_2, shoes_3, bag_1) 
+new_outfit.occasion_compare
 
+new_outfit2 = Outfit.new(bottom_2, top_2, shoes_3, bag_2)
+new_outfit2.occasion_compare
 		
 
 print new_outfit
-
+print new_outfit2
 
 
 
