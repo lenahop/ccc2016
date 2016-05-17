@@ -16,14 +16,47 @@
 #the clothes will be "selected" using a form. More details were written by hand. 
 
 class Clothes
-	attr_accessor :item, :color, :cut
-	def initialize 
+	attr_accessor :item, :color, :cut, :occasion
+	def initialize(item, color, cut, occasion)
 		@item = item 
 		@color = color
 		@cut = cut  
+		@occasion = occasion
 	end 
+
+
 
 end 
 
- Clothes.new("Pants", "Denim", "Oversized cropped")
- Clothes.new("Shirt_LongSleeve", "White", "Oversized")
+b = Clothes.new("Bottom", "Lightwash Denim", "Oversized Jeans", "Casual")
+t = Clothes.new("Top", "White", "Henley", "Casual")
+s = Clothes.new("Shoes", "Black", "Sneakers", "Versatile")
+bag =Clothes.new("Bag", "Camel", "Tote", "Versatile")
+s2 =Clothes.new("Shoes", "Metallic Brown", "Sandal", "Casual")
+t2 =Clothes.new("Top", "Gray", "Tank top", "Versatile")
+b2 = Clothes.new("Bottom", "Brown suede", "Mini Skirt", "Versatile")
+
+
+class Outfit
+	def initialize(top, bottom, shoes, bag)
+		@top = top
+		@bottom = bottom
+		@shoes = shoes
+		@bag = bag
+	end
+
+	def color_compare
+
+
+end
+
+new_outfit = Outfit.new(t,b,s,bag)
+
+		
+
+print new_outfit
+
+
+
+
+
