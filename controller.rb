@@ -1,18 +1,18 @@
 require "sinatra"
+require_relative "models/cccplan.rb"
+
 
 post '/' do
-  top = params[:top]
-  bottom = params[:bottom]
+  top = params[:tops]
+  bottom = params[:bottoms]
   shoes = params[:shoes]
-  bags = params[:bags]
+  bag = params[:bags]
 
-    if top == "fancy" &&  bottom == "fancy" && bags == "fancy" && shoes == "fancy"
-  elsif top == "casual" && bottom == "casual" && bags = "casual" && shoes== "casual"
-  	return "It's a match!"
-	else 
-	return "It's a mismatch!"
+  cher=Outfit.new(top, bottom, shoes, bag)
+  cher.occasion_compare 
 
-end
+
+  
 end 
  
 

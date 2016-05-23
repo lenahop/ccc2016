@@ -47,12 +47,14 @@ class Outfit
 	end
 
 	def occasion_compare
-		if @top.occasion == @bottom.occasion && @shoes.occasion == @bag.occasion
-			puts "It's a match!"
-			puts @top.occasion
+		if @top== @bottom && @shoes == @bag
+			return "It's a match! Cher approved!! You are reading for a #{@top} outing!"
+
 		else 
-			puts "MIS-MATCH! Try again"
-			puts @top.occasion
+			return "MIS-MATCH! Try again, you chose a #{@top} top, a #{
+			@bottom} bottom, a pair of #{@shoes} shoes, and a #{
+			@bag} bag."
+	
 		end 
 	end
 
@@ -68,15 +70,7 @@ class Outfit
 
 end
 
-new_outfit = Outfit.new(bottom_1, top_2, shoes_3, bag_1) 
-new_outfit.occasion_compare
 
-new_outfit2 = Outfit.new(bottom_2, top_2, shoes_3, bag_2)
-new_outfit2.occasion_compare
-		
-
-print new_outfit
-print new_outfit2
 
 
 
