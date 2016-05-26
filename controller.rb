@@ -1,8 +1,11 @@
 require "sinatra"
 require_relative "models/cccplan.rb"
 
+get '/' do 
+	erb :openpage
+end
 
-post '/' do
+post '/closet' do
   top = params[:tops]
   bottom = params[:bottoms]
   shoes = params[:shoes]
@@ -17,7 +20,7 @@ end
  
 
 
-get '/' do 
+get '/closet' do 
 	erb :index
 end
 
