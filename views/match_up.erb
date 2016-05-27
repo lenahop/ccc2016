@@ -1,0 +1,66 @@
+<link href='https://fonts.googleapis.com/css?family=Oswald|Permanent+Marker' rel='stylesheet' type='text/css'>
+
+
+<% case @cher.decision ; when "yay" %>
+    <h1> "It’s a match! Cher approved! You are ready for a @cher.occasion outing. </h1> 
+
+    <style> 
+body {
+  background: url(https://scstylecaster.files.wordpress.com/2015/07/hair-flip.gif) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+h1 { font-family: 'Oswald', sans-serif;
+  width: 90%;
+  max-width: 700px;
+  text-align: left;
+  margin: 0 auto;
+  color:#00ffff;
+  padding-bottom: 32px;}
+
+</style> 
+
+
+<% case @cher.decision ; when 'nay'%>
+<h1> "It’s a mismatch! You chose a @cher.top, @cher.bottom, a pair of @cher.shoes and a @cher.bag" </h1> 
+
+ <style> 
+body {
+  background: url(http://hypeorlando-prod.s3.amazonaws.com/miss-musings/wp-content/uploads/sites/101/2015/07/stumblegif.gif) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+h1 {font-family: 'Oswald', sans-serif;
+  width: 90%;
+  max-width: 700px;
+  text-align: left;
+  margin: 0 auto;
+  color:#00ffff;
+  padding-bottom: 32px;}
+
+  </style> 
+
+<% end %>
+
+
+
+
+<form method= "POST" action="/closet">
+<h2> Well, you can always try again! </h2> 
+</form> 
+ 
+
+ 
+<div class="outfit">
+<form method="GET" action="/closet"> 
+    <button type="sumbit">Choose an outfit!</button> 
+</form>
+
+</div>
+
+
+

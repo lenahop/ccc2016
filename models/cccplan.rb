@@ -15,6 +15,7 @@
 #ACTUAL PLAN: Use a session to save the options and create a class to run objects against certain attributes, also 
 #the clothes will be "selected" using a form. More details were written by hand. 
 
+
 class Clothes
 	attr_accessor :item, :color, :cut, :occasion
 	def initialize(item, color, cut, occasion)
@@ -39,23 +40,32 @@ bag_2 = Clothes.new("Bag", "Black", "Crossbody", "Fancy" )
 shoes_3 = Clothes.new("Shoes", "Black and White", "Heeled Sandal", "Fancy")
 
 class Outfit
+	attr_accessor :decision, :top, :bottom, :shoes, :bag 
 	def initialize(top, bottom, shoes, bag)
 		@top = top
 		@bottom = bottom
 		@shoes = shoes
 		@bag = bag
+	
 	end
 
 	def occasion_compare
+		
 		if @top== @bottom && @shoes == @bag
-			return "It's a match! Cher approved!! You are reading for a #{@top} outing!"
+			#return "It’s a match! Cher-approved! You are ready for a #{top.occasion} outing! "
+			@decision= "yay"
+
+		
+
 
 		else 
-			return "MIS-MATCH! Try again, you chose a #{@top} top, a #{
-			@bottom} bottom, a pair of #{@shoes} shoes, and a #{
-			@bag} bag."
-	
-		end 
+			#return "It’s a mismatch! You chose a #{top.occasion} top,  #{bottom.occasion} bottoms, a pair of #{shoes.occasion} shoes and a #{bag.occasion} bag."
+			
+			@decision= "nay"
+
+			end 
+			
+
 	end
 
 
