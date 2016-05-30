@@ -2,7 +2,7 @@
 
 
 <% case @cher.decision ; when "yay" %>
-    <h1> It’s a match! Cher approved! You are ready for a <%= @cher.occasion %> outing. </h1> 
+    <h1> It’s a match! Cher approved! You are ready for a <%= @cher.top %> outing. </h1> 
 
     <style> 
 body {
@@ -25,7 +25,7 @@ h1 { font-family: 'Oswald', sans-serif;
 <% end %> 
 
 <% case @cher.decision ; when 'nay'%>
-<h1> It’s a mismatch! You chose a @top.occassion, <%= @bottom.occasion %>, a pair of @shoes.occasion and a @bag.occasion </h1> 
+<h1> It’s a mismatch! You chose a <%= @cher.top %> top, a <%= @cher.bottom %> bottom, a pair of <%= @cher.shoes %> shoes and a <%= @cher.bag %> bag </h1> 
 
  <style> 
 body {
